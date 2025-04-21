@@ -1,0 +1,173 @@
+body {
+    font-family: Georgia, sans-serif;
+    background: 
+    radial-gradient(circle at top left, #e9c187, #ecd09e, #dab881); /* Песочный фон */
+    color: #2f3e46; /* Тёмный коричневый для текста */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+header {
+    background-color: #d6b67e; /* Золотой фон для заголовка */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #130f03; /* Золотой цвет */
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    text-align: center;
+    color: #1e7473; /* Тёмно-коричневый для подзаголовков */
+}
+
+.lesson-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.lesson-list li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.lesson-list a {
+    text-decoration: none;
+    color: #d4af37; /* Золотой для ссылок */
+    font-weight: bold;
+}
+
+.lesson-list a:hover {
+    color: #c18541; /* Бронзовый оттенок при наведении */
+}
+
+footer {
+    background-color: #b87333; /* Бронзовый фон для подвала */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.content {
+    
+    margin-top: 20px; /* Отступ сверху */
+    padding: 20px; /* внутренний отступ — 20 пикселей от краёв контейнера до его содержимого */
+    background-color: transparent; /* Без фона */
+    border-radius: 8px; /* Делает скруглённые углы с радиусом 8 пикселей*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляет тень под контейнером, создавая эффект подъёма (как будто блок приподнят над фоном)
+                                                        0 — смещение тени по оси X (нет сдвига влево/вправо),
+                                                        4px — сдвиг вниз по оси Y,
+                                                        6px — степень размытия,
+                                                        rgba(0, 0, 0, 0.1) — цвет тени (чёрный с прозрачностью 10%). */
+    
+}
+
+table {
+    width: 100%; /* Задаём ширину таблицы */
+    margin-top: 30px; /* Добавляет отступ сверху таблицы — 30 пикселей */
+    border-collapse: collapse; /* Убираем расстояние между ячейками (Без этого свойства браузер будет рисовать двойные линии между ячейками)*/
+    text-align: center; /* Центрирует текст внутри таблицы, действует на содержимое table, но его могут переопределить стили td и th. */
+}
+
+table, th, td {
+    border: 1px solid #74622a6c; /* Золотая рамка */
+}
+
+td {
+    padding: 10px; /* Отступы внутри ячеек */
+    background-color: transparent; /* Без фона */
+    text-align: center; /* Центрируем содержимое ячеек */
+    width: 4.76%; /* Ячейки занимают равную ширину */
+    vertical-align: top; /* Выравнивание содержимого по верхнему краю ячейки */
+}
+
+
+td:lang(ru) {
+    font-size: 1.2em; /* Обычный шрифт для русского текста */
+    font-family: 'Times New Roman', sans-serif;
+    text-align: center;
+}
+
+td:lang(ar) {
+    font-size: 2.5em; /* Крупный шрифт для арабского текста */
+    font-family: 'Times New Roman', serif; /* Красивый арабский шрифт */
+    direction: rtl; /* направление письма справа налево */
+    
+}
+
+
+td.left {
+    text-align: left;
+  }
+  td.right {
+    text-align: right;
+  }
+
+
+button[lang="ar"] {
+    font-family: 'Times New Roman', sans-serif; /* укажи поддерживающие арабский шрифты */
+    font-size: 2em; /* сделай шрифт крупнее, если нужно */
+    direction: rtl; /* направление письма справа налево */
+   
+    color: #2f3e46; /* Тёмный коричневый для текста */
+    
+      background-color: transparent; /* Без фона */
+      border: 2px solid #e4c28d;
+    
+      border-radius: 12px;
+      z-index: 1;
+}
+
+button:hover {
+    transform: scale(1.7); /* Увеличение кнопок при наведении */
+}
+
+
+.image-btn {
+    width: 50px; /* Размеры изображений для кнопок */
+    height: 50px;
+    border: none;
+    background-color: transparent; /* Без фона */
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Плавный переход при изменении состояния */
+}
+
+.image-btn img {
+    width: 100%; /* Изображение растягивается по размеру кнопки */
+    height: 100%;
+    
+}
+
+.image-btn:hover img {
+    opacity: 1.7; /* Уменьшаем яркость изображения при наведении */
+    transform: scale(1.5); /* Увеличиваем изображение при наведении */
+}
+
+.image-cell {
+    width: 50px; /* Уменьшенные размеры изображений в таблице */
+    height: 50px;
+    background-color: #fff;
+    overflow: hidden; /* Обрезка лишней части изображения, если оно выходит за пределы ячейки */
+    display: flex;    /* Для выравнивания содержимого по центру */
+    justify-content: center; /* Центрируем изображение по горизонтали */
+    align-items: center; /* Центрируем изображение по вертикали */
+}

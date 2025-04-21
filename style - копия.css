@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background: 
+    radial-gradient(circle at top left, #e9c187, #ecd09e, #dab881); /* Песочный фон */
+    color: #2f3e46; /* Тёмный коричневый для текста */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+header {
+    background-color: #d6b67e; /* Золотой фон для заголовка */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #130f03; /* Золотой цвет */
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    text-align: center;
+    color: #1e7473; /* Тёмно-коричневый для подзаголовков */
+}
+
+.lesson-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.lesson-list li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.lesson-list a {
+    text-decoration: none;
+    color: #d4af37; /* Золотой для ссылок */
+    font-weight: bold;
+}
+
+.lesson-list a:hover {
+    color: #c18541; /* Бронзовый оттенок при наведении */
+}
+
+footer {
+    background-color: #b87333; /* Бронзовый фон для подвала */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.content {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%; /* Задаём ширину таблицы */
+    margin-top: 30px;
+    border-collapse: collapse; /* Убираем расстояние между ячейками */
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #d4af37; /* Золотая рамка */
+}
+
+td {
+    padding: 10px; /* Отступы внутри ячеек */
+    background-color: transparent; /* Без фона */
+    text-align: center; /* Центрируем содержимое ячеек */
+    width: 4.76%; /* Ячейки занимают равную ширину */
+    vertical-align: top; /* Выравнивание содержимого по верхнему краю ячейки */
+}
+
+
+td:lang(ru) {
+    font-size: 1.2em; /* Обычный шрифт для русского текста */
+    font-family: 'Times New Roman', sans-serif;
+    text-align: center;
+}
+
+td:lang(ar) {
+    font-size: 3.5em; /* Крупный шрифт для арабского текста */
+    font-family: 'Times New Roman', serif; /* Красивый арабский шрифт */
+    direction: rtl; /* направление письма справа налево */
+    text-align: center;
+}
+
+button[lang="ar"] {
+    font-family: 'Times New Roman', sans-serif; /* укажи поддерживающие арабский шрифты */
+    font-size: 3em; /* сделай шрифт крупнее, если нужно */
+    direction: rtl; /* направление письма справа налево */
+    text-align: center;
+    color: #2f3e46; /* Тёмный коричневый для текста */
+    background:
+        radial-gradient(circle at 20% 30%, rgba(156, 156, 118, 0.1) 0%, transparent 80%),
+        radial-gradient(circle at 80% 70%, rgba(204, 113, 22, 0.08) 0%, transparent 90%),
+        linear-gradient(135deg, #eed9b7 0%, #f7dfad 100%);
+      background-color: transparent; /* Без фона */
+      border: 2px solid #a28a64;
+      box-shadow:
+        0 0 20px 10px rgba(0, 0, 0, 0.2),
+        inset 0 0 60px rgba(80, 50, 20, 0.3);
+      border-radius: 12px;
+      z-index: 1;
+}
+
+.image-btn {
+    width: 80px; /* Размеры изображений для кнопок */
+    height: 80px;
+    border: none;
+    background-color: transparent; /* Без фона */
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Плавный переход при изменении состояния */
+}
+
+.image-btn img {
+    width: 100%; /* Изображение растягивается по размеру кнопки */
+    height: 100%;
+    object-fit: cover; /* Обрезка, если изображение не подходит по размеру */
+}
+
+.image-btn:hover img {
+    opacity: 1.7; /* Уменьшаем яркость изображения при наведении */
+    transform: scale(1.5); /* Увеличиваем изображение при наведении */
+}
+
+.image-cell {
+    width: 100px; /* Уменьшенные размеры изображений в таблице */
+    height: 100px;
+    background-color: #fff;
+    overflow: hidden; /* Обрезка лишней части изображения, если оно выходит за пределы ячейки */
+    display: flex;    /* Для выравнивания содержимого по центру */
+    justify-content: center; /* Центрируем изображение по горизонтали */
+    align-items: center; /* Центрируем изображение по вертикали */
+}

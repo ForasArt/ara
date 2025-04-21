@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пергаментная таблица</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle, #f5ecd7 0%, #e5d5b0 100%);
+      font-family: 'Georgia', serif;
+      color: #3a2a1a;
+    }
+
+    .table-wrapper {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,230,0.08), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(80,50,20,0.06), transparent 60%),
+        linear-gradient(135deg, #f4e2c6, #e9d8b4);
+      border: 2px solid #a28a64;
+      border-radius: 16px;
+      box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.3),
+        inset 0 0 50px rgba(90, 60, 30, 0.3);
+      position: relative;
+    }
+
+    .table-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -20px; bottom: -20px;
+      left: -20px; right: -20px;
+      background: radial-gradient(circle, rgba(0,0,0,0.25) 0%, transparent 70%);
+      opacity: 0.2;
+      filter: blur(10px);
+      z-index: -1;
+      border-radius: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: transparent;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border: 1px solid rgba(120, 90, 60, 0.5);
+      background-color: rgba(255, 255, 240, 0.3);
+      backdrop-filter: blur(2px);
+    }
+
+    th {
+      background-color: rgba(230, 200, 150, 0.4);
+      font-weight: bold;
+      text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
+    }
+
+    tr:hover td {
+      background-color: rgba(255, 255, 210, 0.4);
+    }
+
+    caption {
+      caption-side: top;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px #fff8e1;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-wrapper">
+    <table>
+      <caption>📜 Реестр Хроник</caption>
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Звание</th>
+          <th>Эпоха</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Энмеркар</td>
+          <td>Правитель Урука</td>
+          <td>III тыс. до н.э.</td>
+        </tr>
+        <tr>
+          <td>Инанна</td>
+          <td>Богиня Любви и Войны</td>
+          <td>Мифологическая</td>
+        </tr>
+        <tr>
+          <td>Думузи</td>
+          <td>Царь-Пастух</td>
+          <td>Доколониальная Месопотамия</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
