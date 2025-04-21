@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Изучение арабского языка">
+    <meta name="keywords" content="арабский язык">
+    <title>Изучение арабского языка</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <h2>Прослушайте название буквы и выберите её списка:</h2>
+    <button id="play-audio" lang="ar">🔊 Слушать</button>
+    <div id="options" style="margin-top: 20px;"></div>
+    <div id="result" style="margin-top: 20px; font-size: 1.5em;"></div>
+    <div id="score" style="margin-top: 20px; font-size: 1.2em;"></div>
+    <button id="resetScore">🔄 Сбросить счётчик</button>
+    
+    <script>
+      let correct;
+      let correctCount = 0;
+      let wrongCount = 0;
+    
+      function updateScore() {
+        document.getElementById("score").textContent = `✅: ${correctCount} | ❌: ${wrongCount}`;
+      }
+    
+      function newQuestion() {
+        const letter = getRandomLetter();
+        correct = letter;
+        const options = getRandomOptions(letter);
+    
+        document.getElementById("options").innerHTML = "";
+        options.forEach(opt => {
+          const btn = document.createElement("button");
+          btn.textContent = opt.letter;
+          btn.setAttribute("lang", "ar");  // Применение стиля к кнопкам
+          btn.onclick = () => checkAnswer(opt);
+          document.getElementById("options").appendChild(btn);
+        });
+    
+        document.getElementById("play-audio").onclick = () => {
+          const audio = new Audio(letter.audio);
+          audio.play();
+        };
+    
+        document.getElementById("result").textContent = "";
+      }
+    
+      function checkAnswer(selected) {
+        if (selected === correct) {
+          document.getElementById("result").textContent = "✅ Верно!";
+          correctCount++;
+        } else {
+          document.getElementById("result").textContent = `❌ Неверно. Правильный ответ: ${correct.letter}`;
+          wrongCount++;
+        }
+        updateScore();
+        setTimeout(newQuestion, 2000); // Переход к следующему вопросу
+      }
+
+      document.getElementById("resetScore").onclick = () => {
+        correctCount = 0;
+        wrongCount = 0;
+        updateScore();
+      };
+
+      newQuestion(); // запуск первого вопроса
+    </script>
+    
+    <script src="praxis01.js"></script>
+
+</body>
+</html>
